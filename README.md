@@ -55,30 +55,12 @@ Socket programming finds applications in various domains, including web developm
 
 Coding:
 Server
-import socket
-s = socket.socket()
-s.bind(('localhost', 8000))
-s.listen(5)
-c, addr = s.accept()
-while True:
-    i = input("Enter a data: ")
-    c.send(i.encode())
-    ack = c.recv(1024).decode()
-    if ack:
-        print(ack)
-        continue
-    else:
-        c.close()
-        break
+<img width="397" height="392" alt="image" src="https://github.com/user-attachments/assets/48b83398-be7a-4c9b-acde-f1123320340b" />
+
 
 
 Client
-import socket
-s = socket.socket()
-s.connect(('localhost', 8000))
-while True:
-    print(s.recv(1024).decode())
-    s.send("Acknowledgement Received".encode())
+<img width="665" height="247" alt="image" src="https://github.com/user-attachments/assets/3f1f511b-6a91-4e85-88e4-5ac0405c3d8d" />
 
 
 Output:
